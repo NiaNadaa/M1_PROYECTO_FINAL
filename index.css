@@ -1,0 +1,262 @@
+*{
+    margin: 5px;
+}
+body{
+    background-color: black;
+}
+#header{
+    font-family:'Amatic SC', cursive;
+    font-size:xx-large;
+    display:flex;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 400;
+    padding: 20px;
+}
+.linksH{
+    font-family:'Amatic SC', cursive;
+    font-size: x-large;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+.linksH a{
+    color:silver;
+    justify-content: space-between;
+}
+a:link{
+    text-decoration: none;
+    color:silver;
+    size: fit-content;
+    padding: 4px 10px 4px 10px;
+}
+a:hover{
+    background-color: rgb(42, 93, 95);
+    border-radius: 2px;
+    opacity: 90%;
+}
+button:hover{
+    background-color: rgb(42, 93, 95);
+    border-radius: 2px;
+    opacity: 90%;
+}
+/* font-family:'Amatic SC', cursive; */
+#main{
+    font-family: 'Source Sans Pro', sans-serif;
+    color:silver;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    align-items: center;  
+    padding: 20px;
+    min-height: 400px;
+}
+#main h1{
+    font-family:'Amatic SC', cursive;
+    font-size: xx-large;
+}
+#search{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+#search h3{
+    font-size: x-large;
+}
+#mainPic{
+    max-width: 400px;
+    filter: invert(1);
+}
+/* font-family: 'Source Sans Pro', sans-serif; */
+#search, #main button{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size:xx-large;
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+#footer{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    color:silver;
+    font-family:'Amatic SC', cursive;
+    font-size:xx-large;
+    display:flex;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 400;
+    padding: 20px;
+}
+#footer button{
+    font-family:'Amatic SC', cursive;
+    font-size: x-large;
+    display: inline-block;
+    border: none;
+    margin: 0;
+    text-decoration: none;
+    background-color: black;
+    color:silver;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+    
+}
+/* ---------------------------------------------------------- */
+
+#card, #books, #cardFav{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.cardContent{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    color:silver;
+    padding: 12px;
+    margin:10px;
+    width: 140px;
+    height: 400px;
+    resize: horizontal;
+/*     border-radius: 5px;
+    box-shadow: 0 2px 4px 0 whitesmoke; */
+    transition: 0.3s;
+}
+.cardFavIn{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    color:silver;
+    padding: 12px;
+    margin:10px;
+    width: 140px;
+    height: 400px;
+    resize: horizontal;
+/*     border-radius: 5px;
+    box-shadow: 0 2px 4px 0 whitesmoke; */
+    transition: 0.3s;
+}
+.cardContent:hover, .bookInfo:hover, .cardFavIn:hover{
+    box-shadow: 0 8px 16px 0 whitesmoke;
+    transition: ease-in 0.8s;
+}
+.cardContent img{
+    width: 100px;
+    height: 150px;
+    object-fit:cover;
+}
+.cardFavIn img{
+    width: 100px;
+    height: 150px;
+    object-fit:cover;
+}
+/* #imgCard{
+    width: 100px;
+    height: 150px;
+    object-fit:cover;
+} */
+.cardInfo, .bookInfo, .cardFavIn{
+    display: flex;
+    font-family: 'Source Sans Pro', sans-serif;
+    flex-direction: column;
+    font-size: medium;
+    color:silver;
+}
+.bookInfo{
+    display: flex;
+    max-width:1100px;
+}
+#moreInfo{
+    font-family: 'Source Sans Pro', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#moreInfo a{
+    color:silver;
+    justify-content: space-between;
+}
+#moreInfo h3{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: xx-large;
+}
+
+/* ------------------RESPONSIVE------------------ */
+
+@media(max-width:425px){
+
+    .linksH{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .linksH a{
+        font-size: large;
+    }
+    #main h1{
+        font-size: x-large;
+    }
+    #main img{
+        width:300px;
+    }
+    #footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .randomSpell{
+        font-size: x-large;
+    }
+    #search h3{
+        font-size: large;
+    }
+    #search p{
+        font-size: medium;
+    }
+    .cardContent img{
+        width: 100px;
+        height: 200px;
+        object-fit:contain;
+    }
+    #moreInfo{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .cardFavIn img{
+        width: 100px;
+        height: 200px;
+        object-fit:contain;
+    }
+}
+
+
+
+/* #cardImg{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 90%;
+    position: relative;
+}
+#cardImg img{
+    max-width: 150px;
+    padding: 8px;
+    object-fit: contain;
+}
+#cardHouse{
+    background-color: black;
+    position: absolute;
+    opacity: 0%;
+}
+#cardHouse:hover{
+    opacity: 100%;
+    transition: 0.5s;
+} */
